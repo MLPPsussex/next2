@@ -20,11 +20,11 @@ function my(){
                 }  
  fetch("/test",option )
      .then(response => response.json())
-     .then(response => {
-               ct1.fillText(response.msg,170,90)
-   alert("returned")
-                         } )
-  .catch(err => alert("Error="+err) )
+     .then(response => alert("returned") )
+     .catch(err => alert("Error="+err) )
+  
+  
+  
     }
            
 ct1.font="50px Arial"
