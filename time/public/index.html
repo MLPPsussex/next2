@@ -15,7 +15,9 @@ var name=prompt("Enter name")
        
 function my(){
 
- const option = { method: 'GET', }  
+ const option = { method: 'GET', 
+               headers: { "Content-Type": "application/json", },   
+                }  
  fetch("/test",option )
      .then(response => response.json())
      .then(response => {
