@@ -20,18 +20,8 @@ function my(){
      .then(response => response.json())
      .then(response => {
                ct1.fillText(response.msg,170,90)   
-                         }
-                        )
-                        
- const option = { method: 'GET', }  
- fetch("/locate",option )
-     .then(response => response.json())
-     .then(response => {
-               ct1.fillText(response.nmber,10,100)   
                          } )
-      .catch(err => {alert('locate err='+err)}); 
-                        
-}
+    }
            
 ct1.font="50px Arial"
 ct1.fillText("Test",0,90)
