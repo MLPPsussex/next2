@@ -18,10 +18,10 @@ function my(){
  const option = { method: 'GET', 
                headers: { "Content-Type": "application/json", },   
                 }  
- fetch("/test",option )
-     .then(response => response.json())
-     .then(response => alert("returned") )
-     .catch(err => alert("Error="+err) )
+ let res= await fetch("/test",option )
+ let body = await res.json()
+ alert("returned"+body.msg)
+  //   .catch(err => alert("Error="+err) )
   
   
   
