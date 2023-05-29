@@ -19,13 +19,15 @@ function my(){
  fetch("/test",option )
      .then(response => response.json())
      .then(response => {
-               ct1.fillText(response.msg,170,90)   
+               ct1.fillText(response.msg,170,90)
+   alert("returned")
                          } )
+  .catch(err => alert("Error="+err) )
     }
            
 ct1.font="50px Arial"
-ct1.fillText("Test",0,90)
-    setTimeout(my,2000)
+ct1.fillText("Test2",0,90)
+    setTimeout(my,1000)
     
     </script>
   </body>
