@@ -16,6 +16,7 @@ function my(){
                headers: { "Content-Type": "application/json", },   
                 }  
  fetch("/test",option )
+  .then(response => alert("raw response"=response) )
  .then( response => response.json() )
  .then( response => alert("returned"+response.msg) )
  .catch(err => alert("Error="+err) )
