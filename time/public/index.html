@@ -16,7 +16,7 @@ function my(){
                headers: { "Content-Type": "application/json", },   
                 }  
  fetch("/test",option )
-  .then(response => alert("raw response"=response) )
+  .then(response => alert("raw response"+response) )
  .then( response => response.json() )
  .then( response => alert("returned"+response.msg) )
  .catch(err => alert("Error="+err) )
@@ -24,7 +24,7 @@ function my(){
 }
            
 ct1.font="50px Arial"
-ct1.fillText("myTest",0,90)
+ct1.fillText("myTest2",0,90)
 setTimeout(my,1000)
     
   </script>
