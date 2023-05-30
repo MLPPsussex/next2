@@ -5,32 +5,27 @@
   <script>
     const c1 = document.getElementById('canvas');
     const ct1 = c1.getContext('2d');
-
-    // Set canvas dimensions
     c1.width = 700;
     c1.height = 900;
-var name=prompt("Enter name")
 
- 
+
        
-async function my(){
-
+function my(){
+  
  const option = { method: 'GET', 
                headers: { "Content-Type": "application/json", },   
                 }  
- let res= await fetch("/test",option )
- let body = await res.json()
- alert("returned"+body.msg)
-  //   .catch(err => alert("Error="+err) )
+ fetch("/test",option )
+ .then( response => response.json() }
+ .then( response => alert("returned"+response.msg) )
+ .catch(err => alert("Error="+err) )
   
-  
-  
-    }
+}
            
 ct1.font="50px Arial"
-ct1.fillText("Test5",0,90)
-    setTimeout(my,1000)
+ct1.fillText("Test",0,90)
+setTimeout(my,1000)
     
-    </script>
+  </script>
   </body>
  </html>
